@@ -1,6 +1,6 @@
 from app.log_parser import read_log_file, find_errors
 from app.ai_analyzer import build_incident_prompt, analyze_with_ai
-
+from pathlib import Path
 
 
 def classify_incident(incident):
@@ -78,8 +78,8 @@ def main():
 
     selected_file = log_files[choice - 1]
 
-    log_file = f"../sample_logs/{selected_file}"
-
+    project_root = Path(__file__).resolve().parent.parent
+    log_file = project_root / "sample_logs" / selected_file
 
     logs = read_log_file(log_file)
     errors = find_errors(logs)
