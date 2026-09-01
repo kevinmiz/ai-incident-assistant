@@ -1,0 +1,5 @@
+2026-08-31 14:30:01 INFO Message consumer started
+2026-08-31 14:30:02 INFO Connecting to RabbitMQ
+2026-08-31 14:30:05 ERROR Connection refused
+2026-08-31 14:30:05 ERROR Unable to connect to RabbitMQ
+2026-08-31 14:30:05 ERROR Message processing stopped

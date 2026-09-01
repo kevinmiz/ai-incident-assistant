@@ -1,0 +1,5 @@
+2026-08-31 12:20:01 INFO API request received
+2026-08-31 12:20:01 INFO Processing transaction request
+2026-08-31 12:20:02 ERROR HTTP 500 Internal Server Error
+2026-08-31 12:20:02 ERROR NullPointerException occurred
+2026-08-31 12:20:02 INFO Transaction request failed

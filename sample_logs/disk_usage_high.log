@@ -1,0 +1,5 @@
+2026-08-31 13:05:01 INFO Disk monitoring started
+2026-08-31 13:05:01 INFO Checking /var filesystem
+2026-08-31 13:05:02 WARN Disk usage reached 90%
+2026-08-31 13:10:02 ERROR Disk usage reached 98%
+2026-08-31 13:10:02 ERROR Application may become unavailable

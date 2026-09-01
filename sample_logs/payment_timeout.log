@@ -1,0 +1,6 @@
+2026-08-31 10:01:12 INFO Transaction request received
+2026-08-31 10:01:13 INFO User ID: U001
+2026-08-31 10:01:13 INFO Calling payment service
+2026-08-31 10:01:18 ERROR Connection timeout
+2026-08-31 10:01:18 ERROR Payment service unavailable
+2026-08-31 10:01:18 INFO Transaction failed
