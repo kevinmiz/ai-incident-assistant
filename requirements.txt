@@ -1,4 +1,4 @@
 google-genai==2.20.0
 python-dotenv
 pytest
-
+elasticsearch>=8,<9
