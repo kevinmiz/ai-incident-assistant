@@ -1,6 +1,7 @@
 from app.log_parser import read_log_file, find_errors
 from app.ai_analyzer import build_incident_prompt, analyze_with_ai
 from pathlib import Path
+from app.elasticsearch_client import save_incident
 
 
 def classify_incident(incident):
@@ -91,6 +92,19 @@ def main():
         print(f"Level     : {error['level']}")
         print(f"Message   : {error['message']}")
         print()
+
+    try:
+        result = save_incident(
+            incident,
+            category,
+            severity,
+            errors
+        )
+
+        print(f"\nIncident saved to Elasticsearch: {result}")
+
+    except Exception as error:
+        print(f"\nFailed to save incident to Elasticsearch: {error}")
 
     prompt = build_incident_prompt(
         incident,
