@@ -1,5 +1,5 @@
-from log_parser import read_log_file, find_errors
-from ai_analyzer import build_incident_prompt, analyze_with_ai
+from app.log_parser import read_log_file, find_errors
+from app.ai_analyzer import build_incident_prompt, analyze_with_ai
 
 
 
