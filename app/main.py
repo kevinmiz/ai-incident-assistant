@@ -2,6 +2,7 @@ from app.log_parser import read_log_file, find_errors
 from app.ai_analyzer import build_incident_prompt, analyze_with_ai
 from pathlib import Path
 from app.elasticsearch_client import save_incident
+from app.runbook import get_runbook
 
 
 def classify_incident(incident):
@@ -47,6 +48,13 @@ def main():
     print(f"Incident : {incident}")
     print(f"Category : {category}")
     print(f"Severity : {severity}")
+
+    runbook = get_runbook(category)
+
+    print("\n=== RECOMMENDED RUNBOOK ===")
+
+    for index, step in enumerate(runbook, start=1):
+        print(f"{index}. {step}")
 
     log_files = [
         "payment_timeout.log",
